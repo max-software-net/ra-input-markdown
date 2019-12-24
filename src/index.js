@@ -56,7 +56,9 @@ class MarkdownInput extends Component {
           onTabChange={tab=>this.handleTabChange(tab)}
           value={this.state.value}
           generateMarkdownPreview={markdown => Promise.resolve(this.converter.makeHtml(markdown))}
-          selectedTab={this.state.tab}/>
+          selectedTab={this.state.tab}
+          maxEditorHeight={25}
+        />
       </FormControl>
     );
   }
